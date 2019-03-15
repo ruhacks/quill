@@ -274,7 +274,11 @@ angular.module('reg')
               {
                 name: 'Name',
                 value: user.profile.name
-              },{
+              },
+              {name: 'Age',
+                value: user.profile.age
+              },
+              {
                 name: 'Gender',
                 value: user.profile.gender
               },{

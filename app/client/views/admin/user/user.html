@@ -89,6 +89,13 @@
                ng-model="selectedUser.profile.name">
       </div>
 
+      <div class="field">
+        <label> Age </label>
+        <input type="number"
+               name="age"
+               ng-model="selectedUser.profile.age">
+      </div>
+
       <div class="field" ng-show="autoFilledSchool">
         <label> School </label>
         <input class="ui input"
@@ -139,7 +146,7 @@
 
       <div class="field">
         <label>
-            What would you like to learn or get out of HackMIT? (optional)
+            What would you like to learn or get out of RU Hacks? (optional)
         </label>
         <textarea ng-model="selectedUser.profile.essay">
         </textarea>
@@ -147,15 +154,6 @@
 
       <div class="field"
            ng-hide="isMitStudent">
-        <p>
-          Because of limitations imposed by MIT, we are not legally allowed to host
-          non-MIT minors (those under 18) for HackMIT 2015. Checking the box below affirms that you are or will be 18 years or older by September 19th, 2015.
-        </p>
-        <p>
-          <strong>
-          We will be checking ID. If you are a non-MIT minor, you will be turned away at the door.
-          </strong>
-        </p>
         <div class="ui checkbox">
           <input type="checkbox" id="adult" ng-model="selectedUser.profile.adult">
           <label for="adult">I am 18 or older.</label>

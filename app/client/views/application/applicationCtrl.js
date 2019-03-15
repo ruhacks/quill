@@ -144,6 +144,15 @@ angular.module('reg')
                 }
               ]
             },
+            city: {
+              identifier: 'city',
+              rules: [
+                {
+                  type: 'empty',
+                  prompt: 'Please enter a city'
+                }
+              ]
+            },
             adult: {
               identifier: 'adult',
               rules: [

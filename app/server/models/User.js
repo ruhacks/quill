@@ -1,5 +1,5 @@
 var mongoose   = require('mongoose'),
-    bcrypt     = require('bcrypt'),
+    bcrypt     = require('bcryptjs'),
     validator  = require('validator'),
     jwt        = require('jsonwebtoken');
     JWT_SECRET = process.env.JWT_SECRET;
@@ -8,6 +8,12 @@ var profile = {
 
   // Basic info
   name: {
+    type: String,
+    min: 1,
+    max: 100,
+  },
+
+  age: {
     type: String,
     min: 1,
     max: 100,
