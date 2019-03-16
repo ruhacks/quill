@@ -35,10 +35,46 @@
         </div>
 
         <div class="field">
+          <label>Gender</label>
+          <select
+            name="gender"
+            ng-model="user.profile.gender">
+            <option value="">Gender</option>
+            <option value="M">Male</option>
+            <option value="F">Female</option>
+            <option value="O">Other</option>
+            <option value="N">I prefer not to answer.</option>
+          </select>
+        </div>
+
+        <div class="field">
           <label> City </label>
           <input type="text"
-                 name="City"
+                 name="city"
                  ng-model="user.profile.city">
+        </div>
+
+        <div class="field">
+          <label>
+            What experience do you have (programming)
+          </label>
+          <textarea name = "expP" ng-model="user.profile.expP">
+          </textarea>
+        </div>
+
+        <div class="field">
+          <label> How many hackathons have you attended? </label>
+          <input type="number"
+                 name="hackNum"
+                 ng-model="user.profile.hackNum">
+        </div>
+
+        <div class="field">
+          <label>Major/Program</label>
+          <input type="text"
+                 name = 'program'
+                 placeholder="Computer Engineering, Business Technology Managemenet etc.."
+                 ng-model="user.profile.program">
         </div>
 
         <div class="field" ng-show="autoFilledSchool">
@@ -65,55 +101,75 @@
             name="year"
             ng-model="user.profile.graduationYear">
             <option value="">Graduation Year</option>
-            <option value="2016">2016</option>
-            <option value="2017">2017</option>
-            <option value="2018">2018</option>
             <option value="2019">2019</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022+</option>
           </select>
         </div>
 
         <div class="field">
-          <label>Gender</label>
-          <select
-            name="gender"
-            ng-model="user.profile.gender">
-            <option value="">Gender</option>
-            <option value="M">Male</option>
-            <option value="F">Female</option>
-            <option value="O">Other</option>
-            <option value="N">I prefer not to answer.</option>
-          </select>
+          <label>What is your Github? (optional)</label>
+          <input type="text"
+                 name = 'github'
+                 placeholder="ex: https://github.com/dstingaciu/"
+                 ng-model="user.profile.github">
+        </div>
+
+        <div class="field">
+          <label>Do you have a personal website? (optional)</label>
+          <input type="text"
+                 name = 'persWeb'
+                 placeholder="www.me.com"
+                 ng-model="user.profile.persWeb">
+        </div>
+
+        <div class="field">
+          <label>How did you hear about us?</label>
+          <input type="text"
+                 name = 'hearAbout'
+                 placeholder="emai, MLH, other, etc.."
+                 ng-model="user.profile.hearAbout">
         </div>
 
         <div class="field">
           <label>I would describe myself as a...</label>
           <input type="text"
+                 name = 'description'
                  placeholder="Designer, Data Scientist, iOS Wizard, Hacker Extraordinaire"
                  ng-model="user.profile.description">
         </div>
 
         <div class="field">
           <label>
-              What would you like to learn or get out of HackMIT? (optional)
+              What would you like to learn or get out of RU Hacks?
           </label>
           <textarea ng-model="user.profile.essay">
           </textarea>
         </div>
 
-        <div class="field"
-             ng-hide="isMitStudent">
-          <p>
-            Because of limitations imposed by MIT, we are not legally allowed to host
-            non-MIT minors (those under 18) for HackMIT 2015. Checking the box below affirms that you are or will be 18 years or older by September 19th, 2015.
-          </p>
-          <p>
-            <strong>
-            We will be checking ID. If you are a non-MIT minor, you will be turned away at the door.
-            </strong>
-          </p>
+        <div class="field">
+          <label>
+            What is something you have done/created (personal project) that you are most proud of and why? 
+          </label>
+          <textarea ng-model="user.profile.persProj">
+          </textarea>
+        </div>
+
+        <div class="field">
+          <label>
+            What is an essential not-so-obvious skill in life?
+          </label>
+          <textarea ng-model="user.profile.reddit">
+          </textarea>
+        </div>
+
+        
+
+        <div class="field" ng-hide="isMitStudent">
           <div class="ui checkbox">
             <input type="checkbox" id="adult" ng-model="user.profile.adult">
-            <label for="adult">I am 18 or older.</label>
+            <label for="adult"> <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">I have read and agree to the ​MLH Code of Conduct </a></label>
           </div>
         </div>
 

@@ -96,6 +96,48 @@
                ng-model="selectedUser.profile.age">
       </div>
 
+      <div class="field">
+        <label>Gender</label>
+        <select
+          name="gender"
+          ng-model="selectedUser.profile.gender">
+          <option value="">Gender</option>
+          <option value="M">Male</option>
+          <option value="F">Female</option>
+          <option value="O">Other</option>
+          <option value="N">I prefer not to answer.</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label> City </label>
+        <input type="text"
+               name="city"
+               ng-model="selectedUser.profile.city">
+      </div>
+
+      <div class="field">
+        <label>
+          What experience do you have (programming)
+        </label>
+        <input type = "number" name = "expP" ng-model="selectedUser.profile.expP">
+        </textarea>
+      </div>
+
+      <div class="field">
+        <label> How many hackathons have you attended? </label>
+        <input type="number"
+               name="hackNum"
+               ng-model="selectedUser.profile.hackNum">
+      </div>
+
+      <div class="field">
+        <label>Major/Program</label>
+        <input type="text"
+               placeholder="Computer Engineering, Business Technology Managemenet etc.."
+               ng-model="selectedUser.profile.program">
+      </div>
+
       <div class="field" ng-show="autoFilledSchool">
         <label> School </label>
         <input class="ui input"
@@ -117,24 +159,32 @@
           name="year"
           ng-model="selectedUser.profile.graduationYear">
           <option value="">Graduation Year</option>
-          <option value="2016">2016</option>
-          <option value="2017">2017</option>
-          <option value="2018">2018</option>
           <option value="2019">2019</option>
+          <option value="2020">2020</option>
+          <option value="2021">2021</option>
+          <option value="2022">2022+</option>
         </select>
       </div>
 
       <div class="field">
-        <label>Gender</label>
-        <select
-          name="gender"
-          ng-model="selectedUser.profile.gender">
-          <option value="">Gender</option>
-          <option value="M">Male</option>
-          <option value="F">Female</option>
-          <option value="O">Other</option>
-          <option value="N">I prefer not to answer.</option>
-        </select>
+        <label>What is your Github? (optional)</label>
+        <input type="text"
+               placeholder="ex: https://github.com/dstingaciu/"
+               ng-model="selectedUser.profile.github">
+      </div>
+
+      <div class="field">
+        <label>Do you have a personal website? (optional)</label>
+        <input type="text"
+               placeholder="www.me.com"
+               ng-model="selectedUser.profile.persWeb">
+      </div>
+
+      <div class="field">
+        <label>How did you hear about us</label>
+        <input type="text"
+               placeholder="email, MLH, other, etc.."
+               ng-model="selectedUser.profile.hearAbout">
       </div>
 
       <div class="field">
@@ -146,9 +196,25 @@
 
       <div class="field">
         <label>
-            What would you like to learn or get out of RU Hacks? (optional)
+            What would you like to learn or get out of RU Hacks?
         </label>
         <textarea ng-model="selectedUser.profile.essay">
+        </textarea>
+      </div>
+
+      <div class="field">
+        <label>
+          What is something you have done/created (personal project) that you are most proud of and why? 
+        </label>
+        <textarea ng-model="selectedUser.profile.essay">
+        </textarea>
+      </div>
+
+      <div class="field">
+        <label>
+          What is an essential not-so-obvious skill in life?
+        </label>
+        <textarea ng-model="selectedUser.profile.reddit">
         </textarea>
       </div>
 
@@ -156,7 +222,7 @@
            ng-hide="isMitStudent">
         <div class="ui checkbox">
           <input type="checkbox" id="adult" ng-model="selectedUser.profile.adult">
-          <label for="adult">I am 18 or older.</label>
+          <label for="adult">I have read and agree to the ​MLH Code of Conduct </label>
         </div>
       </div>
 

@@ -117,6 +117,15 @@ angular.module('reg')
                 }
               ]
             },
+            age: {
+              identifier: "age",
+              rules:[
+                {
+                  type: 'empty',
+                  prompt: 'Please enter your age'
+                }
+              ]
+            },
             school: {
               identifier: 'school',
               rules: [
@@ -132,6 +141,24 @@ angular.module('reg')
                 {
                   type: 'empty',
                   prompt: 'Please select your graduation year.'
+                }
+              ]
+            },
+            hackNum:{
+              identifier: 'hackNum',
+              rules: [
+                {
+                  type: 'empty',
+                  prompt: 'Please enter a number'
+                }
+              ]
+            },
+            program:{
+              identifier: 'program',
+              rules: [
+                {
+                  type: 'empty',
+                  prompt: 'Please fill in your major/program'
                 }
               ]
             },
@@ -153,12 +180,48 @@ angular.module('reg')
                 }
               ]
             },
+            expP: {
+              identifier: 'expP',
+              rules: [
+                {
+                  type: 'empty',
+                  prompt: 'Please enter your level of experience'
+                }
+              ]
+            },
+            essay:{
+              identifier: 'essay',
+              rules: [
+                {
+                  type: 'empty',
+                  prompt: 'Please tell us why you want to attned!'
+                }
+              ]
+            },
+            persProj:{
+              identifier: 'persProj',
+              rules: [
+                {
+                  type: 'empty',
+                  prompt: 'Please tell us of any personal project, if none just type none'
+                }
+              ]
+            },
+            reddit:{
+              identifier: 'reddit',
+              rules: [
+                {
+                  type: 'empty',
+                  prompt: 'Please fill in the question'
+                }
+              ]
+            },
             adult: {
               identifier: 'adult',
               rules: [
                 {
                   type: 'allowMinors',
-                  prompt: 'You must be an adult, or an MIT student.'
+                  prompt: 'You must read and agree to the MLH code of conduct'
                 }
               ]
             }

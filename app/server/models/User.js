@@ -10,54 +10,90 @@ var profile = {
   name: {
     type: String,
     min: 1,
-    max: 100,
+    max: 100
   },
-
   age: {
     type: String,
     min: 1,
-    max: 100,
+    max: 100
   },
-
-  adult: {
-    type: Boolean,
-    required: true,
-    default: false,
-  },
-
-  school: {
-    type: String,
-    min: 1,
-    max: 150,
-  },
-
-  graduationYear: {
-    type: String,
-    enum: {
-      values: '2016 2017 2018 2019'.split(' '),
-    }
-  },
-
-  description: {
-    type: String,
-    min: 0,
-    max: 300
-  },
-
-  essay: {
-    type: String,
-    min: 0,
-    max: 1500
-  },
-
-  // Optional info for demographics
   gender: {
     type: String,
     enum : {
       values: 'M F O N'.split(' ')
     }
   },
-
+  city:{
+    type: String,
+    min: 0,
+    max: 500
+  },
+  expP: {
+    type: String,
+    min:0,
+    max: 1500
+  },
+  hackNum:{
+    type: String,
+    min: 0,
+    max: 100
+  },
+  program:{
+    type: String,
+    min: 0,
+    max: 500
+  },
+  school: {
+    type: String,
+    min: 1,
+    max: 150
+  },
+  graduationYear: {
+    type: String,
+    enum: {
+      values: '2019 2020 2021 2022'.split(' '),
+    }
+  },
+  github:{
+    type: String,
+    min: 0,
+    max: 1500
+  },
+  persWeb:{
+    type: String,
+    min: 0,
+    max: 1500
+  },
+  hearAbout:{
+    type: String,
+    min: 0,
+    max: 500
+  },
+  description: {
+    type: String,
+    min: 0,
+    max: 300
+  },
+  essay: {
+    type: String,
+    min: 0,
+    max: 1500
+  },
+  persProj:{
+    type: String,
+    min: 0,
+    max: 1500
+  },
+  reddit:{
+    type: String,
+    min: 0,
+    max: 1500
+  },
+  adult: {
+    type: Boolean,
+    required: true,
+    default: false
+  }
 };
 
 // Only after confirmed
