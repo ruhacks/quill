@@ -4,7 +4,7 @@
     "env": {
         "NODE_ENV": {
             "description": "dev or production",
-            "value": "dev"
+            "value": "production"
         },
         "JWT_SECRET": {
             "description": "Long random string used to verify JWT tokens for user authentication",

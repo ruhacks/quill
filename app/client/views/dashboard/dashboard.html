@@ -65,7 +65,7 @@
           <strong>
             Registration Deadline:
           </strong>
-          {{ timeClose }}
+          {{ timeClose }} )
         </div>
 
         <div
@@ -80,7 +80,7 @@
         <div
           ng-if="dashState('openAndIncomplete')"
           class="description">
-          <p>
+          <p style="text-align: center;">
             <strong>
                 {{ DASHBOARD.INCOMPLETE_TITLE }}
             </strong>
@@ -99,7 +99,7 @@
         <div
           ng-if="dashState('openAndSubmitted')"
           class="description">
-          <p>
+          <p style="text-align: center;">
             <strong>
                 {{ DASHBOARD.SUBMITTED_TITLE }}
             </strong>

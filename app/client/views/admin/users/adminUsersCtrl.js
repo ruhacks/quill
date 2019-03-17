@@ -275,24 +275,64 @@ angular.module('reg')
                 name: 'Name',
                 value: user.profile.name
               },
-              {name: 'Age',
+              {
+                name: 'Age',
                 value: user.profile.age
               },
               {
                 name: 'Gender',
                 value: user.profile.gender
-              },{
+              },
+              {
+                name: 'City',
+                value: user.profile.city
+              },
+              {
+                name: 'Programming Experience',
+                value: user.profile.expP
+              },
+              {
+                name: 'Number of hackathons',
+                value: user.profile.hackNum
+              },
+              {
+                name: 'School program',
+                value: user.profile.program
+              },
+              {
                 name: 'School',
                 value: user.profile.school
-              },{
+              },
+              {
                 name: 'Graduation Year',
                 value: user.profile.graduationYear
-              },{
+              },
+              {
+                name: 'github',
+                value: user.profile.github
+              },
+              {
+                name: 'Personal Website',
+                value: user.profile.persWeb
+              },
+              {
+                name: 'Where did they hear about us?',
+                value: user.profile.hearAbout
+              },
+              {
                 name: 'Description',
                 value: user.profile.description
               },{
-                name: 'Essay',
+                name: 'What do they want out of RU hacks',
                 value: user.profile.essay
+              },
+              {
+                name: 'Personal project',
+                value: user.profile.persProj
+              },
+              {
+                name: 'Not-so-obvious skill',
+                value: user.profile.reddit
               }
             ]
           },{
@@ -311,46 +351,11 @@ angular.module('reg')
                 name: 'Major',
                 value: user.confirmation.major
               },{
-                name: 'Github',
-                value: user.confirmation.github
-              },{
                 name: 'Website',
                 value: user.confirmation.website
               },{
-                name: 'Needs Hardware',
-                value: user.confirmation.wantsHardware,
-                type: 'boolean'
-              },{
                 name: 'Hardware Requested',
                 value: user.confirmation.hardware
-              }
-            ]
-          },{
-            name: 'Hosting',
-            fields: [
-              {
-                name: 'Needs Hosting Friday',
-                value: user.confirmation.hostNeededFri,
-                type: 'boolean'
-              },{
-                name: 'Needs Hosting Saturday',
-                value: user.confirmation.hostNeededSat,
-                type: 'boolean'
-              },{
-                name: 'Gender Neutral',
-                value: user.confirmation.genderNeutral,
-                type: 'boolean'
-              },{
-                name: 'Cat Friendly',
-                value: user.confirmation.catFriendly,
-                type: 'boolean'
-              },{
-                name: 'Smoking Friendly',
-                value: user.confirmation.smokingFriendly,
-                type: 'boolean'
-              },{
-                name: 'Hosting Notes',
-                value: user.confirmation.hostNotes
               }
             ]
           },{
