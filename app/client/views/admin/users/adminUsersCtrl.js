@@ -280,8 +280,24 @@ angular.module('reg')
                 value: user.profile.age
               },
               {
+                name: 'Ethnicity',
+                value: user.profile.ethnicity
+              },
+              {
+                name: 'Other ethnicity',
+                value: user.profile.otherEthnicity
+              },
+              {
+                name: 'pNum',
+                value: user.profile.pNum
+              },
+              {
                 name: 'Gender',
                 value: user.profile.gender
+              },
+              {
+                name: 'Other Gender',
+                value: user.profile.otherGender
               },
               {
                 name: 'City',
@@ -294,6 +310,10 @@ angular.module('reg')
               {
                 name: 'Number of hackathons',
                 value: user.profile.hackNum
+              },
+              {
+                name: 'Most current level of study',
+                value: user.profile.studyLevel
               },
               {
                 name: 'School program',

@@ -17,7 +17,7 @@ angular.module('reg')
       $scope.user = currentUser.data;
 
       // Is the student from MIT?
-      $scope.isMitStudent = $scope.user.email.split('@')[1] == 'mit.edu';
+      $scope.isMitStudent = $scope.user.email.split('@')[1] == 'ryerson.ca';
 
       // If so, default them to adult: true
       if ($scope.isMitStudent){
@@ -70,6 +70,7 @@ angular.module('reg')
           });
       }
 
+
       function _updateUser(e){
         UserService
           .updateProfile(Session.getUserId(), $scope.user.profile)
@@ -86,6 +87,38 @@ angular.module('reg')
         return !$scope.user.profile.adult;
       }
 
+      function readAndAgree(){
+        if($('#adult').is(':checked')){
+          return true;
+        }else{
+          return false;
+        }
+      }
+
+      function isAuthMLH(){
+        //console.log($('#mlhAuth').is(':checked'));
+        if($('#mlhAuth').is(':checked')){
+          return true;
+        }else{
+          return false;
+        }
+      }
+
+      function isOverAge(){
+        console.log($('#overEight'));
+        if($('#overEight').is(':checked')){
+          return true;
+        }else{
+          return false;
+        }
+      }
+
+      function checkValidation(){
+        if(isAuthMLH() && readAndAgree() && isOverAge()){
+          return true;
+        }
+      }
+
       function minorsAreAllowed() {
         return settings.data.allowMinors;
       }
@@ -98,10 +131,15 @@ angular.module('reg')
         return true;
       }
 
+
       function _setupForm(){
         // Custom minors validation rule
         $.fn.form.settings.rules.allowMinors = function (value) {
           return minorsValidation();
+        };
+
+        $.fn.form.settings.rules.threeChecks = function(value){
+          return checkValidation();
         };
 
         // Semantic-UI form validation
@@ -123,6 +161,33 @@ angular.module('reg')
                 {
                   type: 'empty',
                   prompt: 'Please enter your age'
+                }
+              ]
+            },
+            ethnicity: {
+              identifier: "ethnicity",
+              rules:[
+                {
+                  type: 'empty',
+                  prompt: 'Please enter your ethnicity'
+                }
+              ]
+            },
+            studyLevel: {
+              identifier: "studyLevel",
+              rules:[
+                {
+                  type: 'empty',
+                  prompt: 'Please enter your latest study level'
+                }
+              ]
+            },
+            pNum: {
+              identifier: "pNum",
+              rules:[
+                {
+                  type: 'empty',
+                  prompt: 'Please enter a phone number'
                 }
               ]
             },
@@ -167,7 +232,7 @@ angular.module('reg')
               rules: [
                 {
                   type: 'empty',
-                  prompt: 'Please select a gender.'
+                  prompt: 'Please select a gender'
                 }
               ]
             },
@@ -216,6 +281,24 @@ angular.module('reg')
                 }
               ]
             },
+            mlhAuth:{
+              identifier: 'mlhAuth',
+              rules: [
+                {
+                  type: 'threeChecks',
+                  prompt: 'Please make sure you checked all the checkboxes'
+                }
+              ]
+            },
+            overEight:{
+              identifier: 'overEight',
+              rules: [
+                {
+                  type: 'threeChecks',
+                  prompt: 'Please make sure you checked all the checkboxes'
+                }
+              ]
+            },              
             adult: {
               identifier: 'adult',
               rules: [

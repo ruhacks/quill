@@ -28,6 +28,13 @@
         </div>
 
         <div class="field">
+          <label> Phone Number </label>
+          <input type="text"
+                 name="pNum"
+                 ng-model="user.profile.pNum">
+        </div>
+
+        <div class="field">
           <label> Age </label>
           <input type="number"
                  name="age"
@@ -35,9 +42,31 @@
         </div>
 
         <div class="field">
+          <label>What is your race/ethnicity?</label>
+          <select
+            name="ethnicity"
+            ng-model="user.profile.ethnicity">
+            <option value="">Race/Ethnicity</option>
+            <option value="AN">American Indian or Alaskan Native</option>
+            <option value="AS">Asian / Pacific Islander</option>
+            <option value="AA">Black or African American</option>
+            <option value="H">Hispanic</option>
+            <option value="W">White / Caucasian</option>
+            <option value="ML">Multiple ethnicity / Other (Please Specify)</option>
+            <option value="na">Prefer not to answer</option>
+          </select>
+        </div>
+
+        <div class="field" ng-show='user.profile.ethnicity=="ML"'>
+          <label>Other: </label>
+          <input type = 'text', name = 'otherEthnicity', ng-model='user.profile.otherEthnicity'>
+        </div>
+
+        <div class="field ">
           <label>Gender</label>
           <select
             name="gender"
+            id = 'gender'
             ng-model="user.profile.gender">
             <option value="">Gender</option>
             <option value="M">Male</option>
@@ -45,6 +74,11 @@
             <option value="O">Other</option>
             <option value="N">I prefer not to answer.</option>
           </select>
+        </div>
+
+        <div class="field" ng-show='user.profile.gender=="O"'>
+          <label>Other: </label>
+          <input type = 'text', name = 'otherGender', ng-model='user.profile.otherGender'>
         </div>
 
         <div class="field">
@@ -67,6 +101,14 @@
           <input type="number"
                  name="hackNum"
                  ng-model="user.profile.hackNum">
+        </div>
+
+        <div class="field">
+          <label>What is your most current level of study?</label>
+          <input type="text"
+                 name = 'studyLevel'
+                 placeholder="College, University, High School etc.."
+                 ng-model="user.profile.studyLevel">
         </div>
 
         <div class="field">
@@ -128,7 +170,7 @@
           <label>How did you hear about us?</label>
           <input type="text"
                  name = 'hearAbout'
-                 placeholder="emai, MLH, other, etc.."
+                 placeholder="email, MLH, other, etc.."
                  ng-model="user.profile.hearAbout">
         </div>
 
@@ -166,10 +208,24 @@
 
         
 
-        <div class="field" ng-hide="isMitStudent">
+        <div class="field">
           <div class="ui checkbox">
             <input type="checkbox" id="adult" ng-model="user.profile.adult">
             <label for="adult"> <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">I have read and agree to the ​MLH Code of Conduct </a></label>
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="ui checkbox">
+            <input type="checkbox" id="mlhAuth" ng-model="user.profile.mlhAuth">
+            <label for="mlhAuth">I authorize you to share certain application/registration information for event administration, ranking, MLH administration, pre and post-event informational e-mails, and occasional messages about hackathons in-line with the <a href = 'https://mlh.io/privacy'>MLH Privacy Policy</a>. I further I agree to the terms of both the <a href = 'https://github.com/MLH/mlh-policies/blob/master/prize-terms-and-conditions/contest-terms.md'>MLH Contest Terms and Conditions</a> and the <a href = 'https://mlh.io/privacy'>MLH Privacy Policy</a>.</label>
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="ui checkbox">
+            <input type="checkbox" id="overEight" ng-model="user.profile.overEight">
+            <label for="overEight"> I am over the age of 18</label>
           </div>
         </div>
 

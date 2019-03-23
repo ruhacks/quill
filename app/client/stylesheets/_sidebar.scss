@@ -76,6 +76,8 @@
 
 }
 
+
+
 @media only screen and (max-width: 768px) {
   #sidebar {
     @include transform(translate3d(-$sidebar-width, 0, 0));

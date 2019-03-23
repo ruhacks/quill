@@ -13,6 +13,22 @@ var profile = {
     max: 100
   },
   age: {
+    type: Number,
+    min: 1,
+    max: 100
+  },
+  ethnicity: {
+    type: String,
+    enum : {
+      values: 'AN AS AA H W ML na'.split(' ')
+    }
+  },
+  otherEthnicity: {
+    type: String,
+    min: 0,
+    max: 100
+  },
+  pNum: {
     type: String,
     min: 1,
     max: 100
@@ -22,6 +38,11 @@ var profile = {
     enum : {
       values: 'M F O N'.split(' ')
     }
+  },
+  otherGender: {
+    type: String,
+    min: 0,
+    max: 100
   },
   city:{
     type: String,
@@ -34,8 +55,13 @@ var profile = {
     max: 1500
   },
   hackNum:{
-    type: String,
+    type: Number,
     min: 0,
+    max: 100
+  },
+  studyLevel:{
+    type: String,
+    min: 1,
     max: 100
   },
   program:{
@@ -88,6 +114,16 @@ var profile = {
     type: String,
     min: 0,
     max: 1500
+  },
+  mlhAuth:{
+    type: Boolean,
+    required: true,
+    default: false
+  },
+  overEight:{
+    type: Boolean,
+    required: true,
+    default: false
   },
   adult: {
     type: Boolean,
