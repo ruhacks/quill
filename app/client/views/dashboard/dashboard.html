@@ -34,7 +34,7 @@
         <div class="ui divider"></div>
 
         <div ng-if="user.profile.name.length > 0">
-          <p>
+          <p style = 'text-align: center'>
             <strong>
               Welcome back, {{user.profile.name}}!
             </strong>
@@ -70,7 +70,7 @@
           <strong>
             Registration Deadline:
           </strong>
-          {{ timeClose }} )
+          {{ timeClose }} (EDT)
           
         </div>
 
@@ -80,7 +80,7 @@
           <strong>
             Confirmation Deadline:
           </strong>
-          {{ timeConfirm }}
+          {{ timeConfirm }} (EDT)
         </div>
 
         <div
@@ -224,7 +224,7 @@
           <div
             ng-show="!pastConfirmation"
             class="markdown">
-            <h4>
+            <h4 style ='text-align: center'>
                 {{ DASHBOARD.CONFIRMED_NOT_PAST_TITLE }}
             </h4>
           </div>
