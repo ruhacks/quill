@@ -1,0 +1,16 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: weekly
+    time: "10:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: nodemailer
+    versions:
+    - 6.4.17
+    - 6.4.18
+  - dependency-name: elliptic
+    versions:
+    - 6.5.3
